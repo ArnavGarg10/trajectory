@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="images/rocket.png">
+  
+  <title>Trajectory Calculator</title>
+
+  <style>
+    body {
+      background-image: url("images/space.jpg");
+      background-image: linear-gradient(red, yellow);
+      background-size: 5000px 1000px;
+      background-repeat: no-repeat;
+    }
+    .cool {
+      text-align: center;
+      top: 20px;
+    }
+
+    h1, h3, label {
+      font-family: "Lucida Console", "Courier New", monospace;
+      padding-top: 10px;
+      line-height: 2;
+    }
+  
+    #submit {
+      width: 20em;  
+      height: 2em;
+      font-size: 15px;
+      font-family: "Lucida Console", "Courier New", monospace;
+      position: absolute;
+      bottom: 200px;
+      right: 40%;
+    }
+  </style>
+</head>
+<body>
+  <div class = "cool">
+  <h1>Trajectory Calculator</h1>
+  <h3>A program that redefines avoiding debris in space</h3>
+  <form action = "/display" method = "POST">
+    <label>
+      Enter distance from debris(miles):
+      <input type="number" name="distance" minlength="3" maxlength="20" required>
+    </label>
+    <br><br>
+    <label>
+      Height of the debris(miles):
+      <input type = "number" name= "debris_height" minlength = "3" maxlength = "20" required>
+    </label>
+    <br><br>
+    <label>
+      Length of debris(miles):
+      <input type = "number" name = "debris_length" required>
+    </label>
+    <br><br>
+    <label>
+      Height of the debris (miles) relative to the top of the ship (positive and less than height of debris):
+      <input type = "number" name = "debris_relative_height" required>
+    </label>
+    <br><br>
+      <input type = "submit" id = "submit" value = "Submit">
+  </form>
+  </div
+    <img src="code.png" alt="Picture of our code" width="600" height="400" style="border:5px solid black">
+</body>
+</html>
